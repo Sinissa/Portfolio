@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+        * {
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url(book-794978_1920.jpg) no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+        
+        .blur {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            z-index: -99;
+            backdrop-filter: blur(6px);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }      
+
+        header {
+            text-align: center;
+            color: black;
+            font-size: 25px;
+            padding: 10px;
+            font-family: brush script MT, cursive;
+            text-decoration: underline;
+        }
+
+        .menu1 {
+            position: sticky;
+            float: left;
+            top: 0;
+            left: 0;
+            width: 225px;
+            height: 100%;
+            padding: 20px 0;
+            transition: all 0.5s ease;
+            
+        }
+
+        nav table {
+            padding: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 30px;
+            padding: 10px;
+            color: black;
+            border: solid 2px black;
+            font-family: brush script MT, cursive;
+        }
+
+
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 10px;
+            max-width: 1400px;
+        }
+
+        .gallery img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 350px;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+
+
+        .button {
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+        
+       
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+        
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .popup .close:hover {
+            color: #06D85F;
+        }
+
+        .popup .content {
+            max-height: 30%;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 700px) {
+          
+            .popup {
+                width: 70%;
+            }
+            
+        }
+
+
+
+
+    </style>
+    <title>Koiragalleria</title>
+</head>
+<body>
+    <header>
+        <h1>Koiragalleria</h1>
+    </header>
+    <div class="blur"></div>
+    <div class="menu1">
+        <nav>
+            <table>
+                <tr><a href="index.html">Takaisin etusivulle</a></tr>
+            </table>
+            <table>
+                <tr><a href="index3.html">Kolmas sivu</a></tr>
+            </table>
+        </nav>
+    </div>
+
+    <div class="gallery">
+            <a class="button" href="#popup1"><img src="husky-3380548_1280.jpg" alt="koira1"></a>
+            <a class="button" href="#popup2"><img src="labrador-retriever-1210559_1280.jpg" alt="koira2"></a>
+            <a class="button" href="#popup3"><img src="bulldog-8439530_1280.jpg" alt="koira3"></a>
+            <a class="button" href="#popup4"><img src="berni-7928156_1280.jpg" alt="koira4"></a>
+            <a class="button" href="#popup5"><img src="dalmatialainen-1772759_1280.jpg" alt="koira5"></a>
+            <a class="button" href="#popup6"><img src="weimarinseisoja-1742295_1280.jpg" alt="koira6"></a>
+            <a class="button" href="#popup7"><img src="doberman-1334497_1280.jpg" alt="koira7"></a>
+            <a class="button" href="#popup8"><img src="beagle-8006839_1280.jpg" alt="koira8"></a>
+    </div>
+    
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Siperianhusky</h2>
+            <a class="close" href="#close">&times;</a>
+            <div class="content">
+                Siperianhusky polveutuu alun perin koillissiperialaisten alkuperäiskansojen rekikoirista. <br><br>
+                <a href="https://fi.wikipedia.org/wiki/Siperianhusky">Lähde: Wikipedia</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup2" class="overlay">
+        <div class="popup">
+            <h2>Labradorin noutaja</h2>
+            <a class="close" href="#close">&times;</a>
+            <div class="content">
+                Labradorinnoutaja on yksi maailman suosituimmista koiraroduista. Se on suosituin koirarotu Suomessa. <br><br>
+                <a href="https://fi.wikipedia.org/wiki/Labradorinnoutaja">Lähde: Wikipedia</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup3" class="overlay">
+        <div class="popup">
+            <h2>Englanninbulldoggi</h2>
+            <a class="close" href="#close">&times;</a>
+            <div class="content">
+                Englanninbulldoggi on melko pieni ja tukevarakenteinen koira. 
+                1600-luvulla Englanninbulldoggi oli tappelukoira vahvuuden ja päättäväisyyden vuoksi. <br><br>
+                <a href="https://fi.wikipedia.org/wiki/Englanninbulldoggi">Lähde: Wikipedia</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup4" class="overlay">
+        <div class="popup">
+            <h2>Berninpaimenkoira</h2>
+            <a class="close" href="#close">&times;</a>
+            <div class="content">
+                Berninpaimenkoira on suuri koirarotu. Se on varma ja hyväntahtoinen seurakoira, joka viihtyy siellä, 
+                missä sen omat ihmisetkin ovat. <br><br>
+                <a href="https://fi.wikipedia.org/wiki/Berninpaimenkoira">Lähde: Wikipedia</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup5" class="overlay">
+        <div class="popup">
+            <h2>Dalmatiankoira</h2>
+            <a class="close" href="#close">&times;</a>
+            <div class="content">
+                Dalmatialaisten suosio nousi huimasti Dodie Smithin julkaiseman lastenkirjan "Satayksi dalmatiankoiraa" (1956)
+                 ja siihen perustuvien Disneyn elokuvasovitusten myötä. <br><br>
+                 <a href="https://fi.wikipedia.org/wiki/Dalmatiankoira">Lähde: Wikipedia</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup6" class="overlay">
+        <div class="popup">
+            <h2>Weimarinseisoja</h2>
+            <a class="close" href="#close">&times;</a>
+            <div class="content">
+                Weimarinseisoja on älykäs ja innokas metsästyskoira, joka soveltuu myös suurriistan metsästykseen. <br><br>
+                <a href="https://fi.wikipedia.org/wiki/Weimarinseisoja">Lähde: Wikipedia</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup7" class="overlay">
+        <div class="popup">
+            <h2>Dobermanni</h2>
+            <a class="close" href="#close">&times;</a>
+            <div class="content">
+                Dobermanni oli alunperin paljon nykyistä ärhäkämpi koira, 
+                sillä sen tarkoitus oli vaikuttaa mahdollisimman hurjalta ja 
+                tarvittaessa suojellakin omistajaansa vaarallisilta veronkiertäjiltä. <br><br>
+                <a href="https://fi.wikipedia.org/wiki/Dobermanni">Lähde: Wikipedia</a>
+            </div>
+        </div>
+    </div>
+    <div id="popup8" class="overlay">
+        <div class="popup">
+            <h2>Beagle</h2>
+            <a class="close" href="#close">&times;</a>
+            <div class="content">
+                Suomen beagleista iso osa on metsästyskäytössä. Metsästäessään se on sitkeä ja periksiantamaton.
+                Varsinkin Englannissa pienikokoinen Beagle oli hyvä jänisten metsästyksessä. <br><br>
+                <a href="https://fi.wikipedia.org/wiki/Beagle">Lähde: Wikipedia</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
